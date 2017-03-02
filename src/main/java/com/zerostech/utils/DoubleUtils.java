@@ -15,7 +15,7 @@ public class DoubleUtils {
      * @param value 数据值
      * @return String
      */
-    public String format(int count, double value) {
+    public static String format(int count, double value) {
         return format(count, value, BigDecimal.ROUND_HALF_UP);
     }
 
@@ -28,7 +28,7 @@ public class DoubleUtils {
      * @param roundingMode BigDecimal.ROUND_HALF_UP
      * @return String
      */
-    public String format(int count, double value, int roundingMode) {
+    public static String format(int count, double value, int roundingMode) {
         BigDecimal b = new BigDecimal(value);
         return b.setScale(count, roundingMode).toString();
     }
